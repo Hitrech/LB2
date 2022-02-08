@@ -1,36 +1,52 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
+li {
+    list-style-type: none; /* Убираем маркеры у списка */
+   }
 
-.tab, .tab-title {
-    display: inline-block; /* Выстраиваем по горизонтали */
+   li:before {
+    content: "⋇"; /* Добавляем в качестве маркера символ */
+   }
+a
+{
+
+color: rgb(44, 94, 145);
 }
 
-input[type="radio"] { display: none; }/* Не показываем радио кнопку */
-
-.tab-title {/* Цвет фона названия вкладки (Если не выбрана) */
-    background: rgb(255, 255, 255); 
+.Block
+{   
+    background-color: rgb(255, 255, 255);
+    width: 500px;
+    height: 500px;
+    border: 1px solid rgb(0, 0, 0);
 }
 
-.tab-text {/* Текст, если не выбран элемент */
-    position: absolute; /* Абсолютное позиционирование */
-    left: 0; /* Размещаение у левого края */
-    padding: 10px; /* Размер поля вокруг текста */
-    display: none; /* Не показываем текст */
+.Columns{
+display: flex;
+justify-content: flex-center;
+align-items: center;
+border: 0px solid rgb(48, 255, 6);
 }
-
-
-/*Изменение выбранной вкладки*/
-.tab :checked ~ .tab-title {
-    background: rgb(0, 0, 0); /* Цвет фона */
-    color: rgb(255, 255, 255);
+.Columns_up{
+    align-self: flex-start;    
 }
-
-span > div{
-    padding-top: 30px;
-    width: 200px;
+.Columns_down{
+    align-self: flex-end;  
 }
+#Elements{
+    align-self: flex-start;  
+    z-index: 1;
+    width: 166px;
+    height: 166px;
+    border: 5px solid rgb(255, 255, 255);
+    background-color: rgb(47, 0, 255);
 
-.tab :checked ~ .tab-text {
-    display: block; /* Показываем активную вкладку */
+}
+#Elements_1{
+    z-index: 2;
+    width: 166px;
+    height: 332px;
+    border: 5px solid rgb(255, 255, 255);
+    background-color: rgb(47, 0, 255);
 }
