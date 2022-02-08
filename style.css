@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tab, .tab-title {
+    display: inline-block; /* Выстраиваем по горизонтали */
+}
+
+input[type="radio"] { display: none; }/* Не показываем радио кнопку */
+
+.tab-title {/* Цвет фона названия вкладки (Если не выбрана) */
+    background: rgb(255, 255, 255); 
+}
+
+.tab-text {/* Текст, если не выбран элемент */
+    position: absolute; /* Абсолютное позиционирование */
+    left: 0; /* Размещаение у левого края */
+    padding: 10px; /* Размер поля вокруг текста */
+    display: none; /* Не показываем текст */
+}
+
+
+/*Изменение выбранной вкладки*/
+.tab :checked ~ .tab-title {
+    background: rgb(0, 0, 0); /* Цвет фона */
+    color: rgb(255, 255, 255);
+}
+
+span > div{
+    padding-top: 30px;
+    width: 200px;
+}
+
+.tab :checked ~ .tab-text {
+    display: block; /* Показываем активную вкладку */
+}
